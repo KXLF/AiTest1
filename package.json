@@ -1,0 +1,20 @@
+{
+    "name": "@recruit-paas/comment",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/index.tsx",
+    "license": "ISC",
+    "peerDependencies": {
+        "react": "16.x.x",
+        "react-dom": "16.x.x"
+    },
+    "dependencies": {
+        "@recruit-paas/recruit-utils": "workspace:../recruit-utils"
+    },
+    "scripts": {
+        "proxy": "italent-thunder start -o ${port=3001} --proxyVersion=${version=1.0.0} --disable-https={true}",
+        "build-prod": "italent-thunder build prod",
+        "lib": "stl build lib",
+        "example": "sbl start --port 9001"
+    }
+}

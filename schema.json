@@ -1,0 +1,353 @@
+{
+  "Properties": [{
+      "Name": "lang",
+      "Type": "string",
+      "Description": "多语言",
+      "Label": "多语言",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": false,
+        "defaultValue": "zh_CN",
+        "editor": {
+          "type": "Select",
+          "config": {
+            "dataSource": [{
+                "value": "zh_CN",
+                "label": "简体中文"
+              },
+              {
+                "value": "zh_TW",
+                "label": "繁体中文"
+              },
+              {
+                "value": "en_US",
+                "label": "英文"
+              }
+            ]
+          }
+        },
+        "jsType": "value"
+      }
+    },
+    {
+      "Name": "Urls",
+      "Type": "object",
+      "Description": "",
+      "Label": "备注相关接口",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "defaultValue": "",
+        "editor": {
+          "type": "Editor",
+          "config": {
+            "language":"json"
+          }
+        },
+        "jsType": "value"
+      }
+    },
+    {
+      "Name": "isElink",
+      "Type": "boolean",
+      "Description": "是否是Elink页面",
+      "Label": "是否是Elink页面",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "jsType": "value",
+        "defaultValue": true,
+        "editor": {
+          "type": "Switch",
+          "config": {}
+        }
+      }
+    },
+    {
+      "Name": "isHideCommit",
+      "Type": "boolean",
+      "Description": "是否隐藏评论区",
+      "Label": "是否隐藏评论区",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "jsType": "value",
+        "defaultValue": false,
+        "editor": {
+          "type": "Switch",
+          "config": {}
+        }
+      }
+    },
+    {
+      "Name": "isShowTitle",
+      "Type": "boolean",
+      "Description": "是否展示标题",
+      "Label": "是否展示标题",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "jsType": "value",
+        "defaultValue": true,
+        "editor": {
+          "type": "Switch",
+          "config": {}
+        }
+      }
+    },
+    {
+      "Name": "isShowMentionBtn",
+      "Type": "boolean",
+      "Description": "是否展示@同事按钮",
+      "Label": "是否展示@同事按钮",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "jsType": "value",
+        "defaultValue": true,
+        "editor": {
+          "type": "Switch",
+          "config": {}
+        }
+      }
+    },
+    {
+      "Name": "isShowReminderBtn",
+      "Type": "boolean",
+      "Description": "是否提醒按钮",
+      "Label": "是否提醒按钮",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "jsType": "value",
+        "defaultValue": false,
+        "editor": {
+          "type": "Switch",
+          "config": {}
+        }
+      }
+    },
+    {
+      "Name": "location",
+      "Type": "string",
+      "Description": "目前申请详情页面、ai推荐详情页面、人才详情页面使用该组件",
+      "Label": "组件所在位置",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "defaultValue": "applyDetail",
+        "editor": {
+          "type": "Select",
+          "config": {
+            "dataSource": [{
+                "value": "applyDetail",
+                "label": "申请详情页以及Elink(之前默认)"
+              },
+              {
+                "value": "aiRecommend",
+                "label": "ai推荐详情页(新加)"
+              },
+              {
+                "value": "talentDetail",
+                "label": "人才详情页(新加)"
+              },
+              {
+                "value": "talentDetailElink",
+                "label": "人才详情页Elink页面"
+              }, {
+                "value": "blackTalentDetail",
+                "label": "人才详情黑名单页面(新加)"
+              }, {
+                "value": "talentDetailBlackElink",
+                "label": "人才详情黑名单Elink页面"
+              }
+            ]
+          }
+        },
+        "jsType": "value"
+      }
+    },
+    {
+      "Name": "applyId",
+      "Type": "string",
+      "Description": "申请id",
+      "Label": "申请id",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": false,
+        "editor": {
+          "type": "Input",
+          "config": {}
+        },
+        "jsType": "value"
+      }
+    },
+    {
+      "Name": "applicantId",
+      "Type": "string",
+      "Description": "应聘者id",
+      "Label": "应聘者 id",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": false,
+        "editor": {
+          "type": "Input",
+          "config": {}
+        },
+        "jsType": "value"
+      }
+    },
+    {
+      "Name": "onSaveError",
+      "Type": "string",
+      "Description": "保存备注错误时候抛出的事件",
+      "Label": "保存备注错误时候抛出的事件",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": false,
+        "funcType": "event",
+        "cbParams": [],
+        "jsType": "function"
+      }
+    },
+    {
+      "Name": "commentId",
+      "Type": "string",
+      "Description": "备注 id",
+      "Label": "备注 id",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "editor": {
+          "type": "Input",
+          "config": {}
+        },
+        "jsType": "value"
+      }
+    },
+    {
+      "Name": "triggerCommentDeleted",
+      "Type": "string",
+      "Description": "备注已删除的回调",
+      "Label": "备注已删除的回调",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": false,
+        "funcType": "event",
+        "cbParams": [],
+        "jsType": "function"
+      }
+    },
+    {
+      "Name": "onSaveSuccess",
+      "Type": "string",
+      "Description": "保存备注成功之后，刷新推屏上的数量",
+      "Label": "保存备注成功之后，刷新推屏上的数量",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": false,
+        "funcType": "event",
+        "cbParams": [],
+        "jsType": "function"
+      }
+     },
+    {
+      "Label": "refresh",
+      "Name": "refresh",
+      "Type": "string",
+      "Description": "刷新备注",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": false,
+        "jsType": "function",
+        "funcType": "action",
+        "cbParams": []
+      }
+    }, {
+      "Name": "onSuccess",
+      "Type": "string",
+      "Description": "删除、回复、添加备注成功后的回调",
+      "Label": "删除、回复、添加备注成功后的回调",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": false,
+        "funcType": "event",
+        "cbParams": [],
+        "jsType": "function"
+      }
+    },
+    {
+      "Name": "onChange",
+      "Type": "string",
+      "Description": "文本框输入内容",
+      "Label": "文本框输入内容",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": false,
+        "funcType": "event",
+        "cbParams": [],
+        "jsType": "function"
+      }
+    },
+    {
+      "Name": "remarkRemindAllUser",
+      "Type": "boolean",
+      "Description": "是否备注提醒所有人",
+      "Label": "是否备注提醒所有人",
+      "IsArray": false,
+      "IsMetaDataType": false,
+      "Version": null,
+      "Extension": {
+        "editable": true,
+        "jsType": "value",
+        "defaultValue": false,
+        "editor": {
+          "type": "Switch",
+          "config": {}
+        }
+      }
+    }
+  ],
+  "_Name": "RecruitComment",
+  "_Title": "备注组件",
+  "_Description": "备注组件",
+  "_MetaDataType": 1,
+  "_TenantId": 0,
+  "_AppId": 915,
+  "_State": 0,
+  "_Version": "0.0.31"
+}

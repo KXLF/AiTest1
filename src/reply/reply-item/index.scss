@@ -1,0 +1,191 @@
+@import '@beisen-phoenix/style-token/css/variable.scss';
+
+
+@mixin textButtonColor{
+  //normal
+  .phoenix-text-button__textWraper{
+    color:$CSS_VAR-S2 !important;
+  }
+  .phoenix-text-button__preIcon{
+    color: $CSS_VAR-S3 !important;
+  }
+  //hover
+  .phoenix-text-button:hover:not(.phoenix-text-button--primaryDisable) .phoenix-text-button__textWraper{
+    color: $CSS_VAR-S3 !important;
+  }
+  .phoenix-text-button:hover:not(.phoenix-text-button--primaryDisable) .phoenix-text-button__preIcon{
+    color: $CSS_VAR-S2 !important;
+  }
+  //click
+  .phoenix-text-button:active:not(.phoenix-text-button--primaryDisable) .phoenix-text-button__textWraper{
+    color: $CSS_VAR-S2 !important;
+  }
+  .phoenix-text-button:active:not(.phoenix-text-button--primaryDisable) .phoenix-text-button__preIcon{
+    color: $CSS_VAR-S3 !important;
+  }
+  //disabled
+  .phoenix-text-button--primaryDisable{
+    .phoenix-text-button__textWraper, .phoenix-text-button__preIcon{
+      color: $CSS_VAR-M5 !important;
+      &:hover, &:active, &.active{
+        color: $CSS_VAR-M5 !important;
+      }
+    }
+  } 
+}
+.recruit-paas-reply-list {
+  li:last-child .recruit-paas-reply-main__line {
+    display: none;
+  }
+}
+
+.recruit-paas-reply-list>li:last-child {
+  margin-bottom: 12px;
+}
+
+
+.recruit-paas-reply-item {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    padding-top: $Sp-5;
+    padding-right: $Sp-4;
+    padding-bottom: $Sp-3;
+
+
+    .reply-item-avatar {
+      flex-shrink: 0;
+    }
+
+    &:hover {
+      background: RGBA($CSS_VAR-Var-S5, 0.1);
+
+      .recruit-paas-reply-item__operation {
+        display: block;
+      }
+    }
+  }
+
+  &__operation {
+    display: none;
+  }
+
+  &__more {
+    position: absolute;
+    top: $Sp-5;
+    right: $Sp-4;
+    cursor: pointer;
+  }
+
+
+}
+
+.recruit-paas-reply-main {
+  &__wrapper {
+    margin-right: 14px;
+    margin-left: $Sp-3;
+    padding-right: $Sp-6;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  &__header {
+    margin-bottom: $Sp-3;
+    color: $CSS_VAR-M1;
+    @include Fs-1;
+  }
+  &__remind_time{
+    display:inline-flex;
+    align-items: center;
+    margin-bottom: $Sp-3;
+    padding: 0 $Sp-4 0 $Sp-4;
+    color: $F-yellow;
+    font-weight: 400;
+    font-size:12px;
+    line-height: 20px;
+    background: hexToRgba($F-yellow,0.10);
+    border:1px solid hexToRgba($F-yellow,0.52);
+    border-radius: $Ra-2;
+  }
+  &__remind_expireTime{
+    display:inline-flex;
+    align-items: center;
+    margin-bottom: $Sp-3;
+    padding: 0 $Sp-4 0 $Sp-4;
+    color: $CSS_VAR-M5;
+    font-weight: 400;
+    font-size:12px;
+    line-height: 20px;
+    background: RGBA($CSS_VAR-Var-M6,0.30);
+    border:1px solid $CSS_VAR-M6;
+    border-radius: $Ra-2;    
+  }
+  &__remind_bell{
+    margin-right:$Sp-2;
+    color:#FFA42E;
+  }
+  &__remind_expireBell{
+    margin-right:$Sp-2;
+    color:$CSS_VAR-M5;
+  }
+  &__remind_delete{
+    margin-left: $Sp-2;
+    color: $F-yellow;
+    font-weight: 400;
+    cursor:pointer;
+  }
+
+  &__user-name {
+    color: $CSS_VAR-S3;
+  }
+
+  &__type {
+    margin-right: $Sp-2;
+    margin-left: $Sp-2;
+    color: $CSS_VAR-M4;
+  }
+
+
+  &__content {
+    display: inline;
+    color: $CSS_VAR-M3;
+    font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', sans-serif;
+    white-space: pre-wrap;
+  }
+
+  &__bottom {
+    @include Fs-1;
+    color: $CSS_VAR-M5;
+  }
+
+  &__line {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 38px;
+    height: 1px;
+    background: $CSS_VAR-M7;
+  }
+
+  &__private {
+    margin-top: -2px;
+    margin-left: $Sp-2;
+    color: $CSS_VAR-M6;
+    vertical-align: middle;
+  }
+}
+
+
+.recruit-paas-reply-operate {
+  &__wrapper {
+    position: absolute;
+    right: 0;
+    bottom: $Sp-3;
+    display: flex;
+  }
+
+  &__item {
+    margin-right: $Sp-4;
+    @include textButtonColor;
+  }
+}

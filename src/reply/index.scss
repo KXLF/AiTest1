@@ -1,0 +1,14 @@
+@import '@beisen-phoenix/style-token/css/variable.scss';
+
+.recruit-pass-reply {
+  .recruit-pass-show-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: $Sp-3;
+
+    .phoenix-text-button__textWraper {
+      max-width: 100px;
+    }
+  }
+}

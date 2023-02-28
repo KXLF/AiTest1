@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>锁头</title>
+    <desc>Created with Sketch.</desc>
+    <g id="锁头" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <rect id="矩形" x="0" y="0" width="12" height="12"></rect>
+            <path d="M3,4.99994543 L9,4.99994543 C9.55228475,4.99994543 10,5.44766068 10,5.99994543 L10,10 C10,10.5522847 9.55228475,11 9,11 L3,11 C2.44771525,11 2,10.5522847 2,10 L2,5.99994543 C2,5.44766068 2.44771525,4.99994543 3,4.99994543 Z" id="Rectangle-20" fill="#E6E8EB"></path>
+            <path d="M6,1 C7.38071187,1 8.5,2.11928813 8.5,3.5 L8.5,5.5 C8.5,6.31747272 8.10764218,7.04330535 7.50097133,7.49945313 L7.5,3.5 C7.5,2.67157288 6.82842712,2 6,2 C5.17157288,2 4.5,2.67157288 4.5,3.5 L4.5,3.5 L4.50004507,7.50021694 C3.89279608,7.04411586 3.5,6.31792915 3.5,5.5 L3.5,3.5 C3.5,2.11928813 4.61928813,1 6,1 Z" id="Combined-Shape" fill="#E6E8EB"></path>
+        </g>
+    </g>
+</svg>

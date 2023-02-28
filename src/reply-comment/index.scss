@@ -1,0 +1,301 @@
+@import '@beisen-phoenix/style-token/css/variable.scss';
+
+.recruit-paas-comment {
+  &__remind_timeWrap{
+    height: 10px;
+  }
+// 有提醒按钮和无提醒按钮时，设为私密按钮位置不同
+  &__hasReminderBtn{
+    .commentor-button-area-right{
+      flex-grow:0 !important;
+    }
+    .commentor-button-area-left-ul{
+      position:relative;
+      flex-grow:1;
+    }
+    .commentor-button-area-left-ul li{
+      padding-right:$Sp-3;
+    }
+    .commentor-button-area-left-ul li:nth-child(3){
+      position:absolute;
+      right:0;
+    }
+  }
+  &__wrapper {
+    @include styleWrapperCommon;
+    // display: flex;
+    // flex-direction: column;
+    box-sizing: border-box;
+    padding-bottom: 18px;
+
+    .beisen-phoenix-commentor {
+      min-width: auto;
+      .commentor-button-area-left{
+        flex-grow:1;
+        margin-right:0;
+      }
+      .commentor-button-area-left-ul{
+        flex-grow:1;
+      }
+      .phoenix-unmodeled-layer{
+        top:1px;
+        margin-right:0;
+      }
+    }
+    //.phoenix-textarea__realTextarea {
+    //  max-height: 44px !important;
+    //}
+
+    .commentor-file-list {
+      margin-top: $Sp-5;
+    }
+
+    .beisen-phoenix-commentor .commentor-button-area-left-ul li .commentor-btn-svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  // &__wrapper-flex {
+  //   height: 100vh;
+  // }
+
+  &__scroll-line::after {
+    display: block;
+    height: 1px;
+    margin-left: 6px;
+    background: $CSS_VAR-M6;
+    content: '';
+  }
+
+  &__header {
+    padding-right: $Sp-8;
+    padding-left: $Sp-8;
+
+    // textarea::-webkit-input-placeholder {
+    //   // color: blue;
+    //   // font-size: 26px;
+    //   // color: #0e1114;
+    //   // font-weight: bold;
+    //   // @include styleWrapperCommon;
+    //   font-size: 14px;
+    //   color: #BFC3C7;
+    //   font-family: "PingFang SC", 'PingFangSC-Regula', "Hiragino Sans GB", STHeitiSC, Helvetica, "Helvetica Neue", "Microsoft YaHei", Tahoma;
+    // }
+
+
+    textarea::-webkit-input-placeholder {
+      /* WebKit browsers */
+      color: $CSS_VAR-M5;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    textarea:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: $CSS_VAR-M5;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+
+    textarea::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: $CSS_VAR-M5;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+
+    textarea:-ms-input-placeholder {
+      /* Internet Explorer 10+ */
+      color: $CSS_VAR-M5;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    .private-checkbox1 {
+      color: $CSS_VAR-M2;
+
+      .phoenix-checkbox__text.color-M3 {
+        min-width: fit-content;
+        color: $CSS_VAR-M2;
+      }
+    }
+  }
+
+  &__list {
+    padding-right: $Sp-8;
+    padding-left: $Sp-8;
+    // overflow-y: scroll;
+    // @include scrollBar;
+  }
+
+  &__flex {
+    // position: relative;
+    // flex: 1;
+    // padding-right: $Sp-8;
+    padding: 0 14px 18px  $Sp-8;
+    // padding-bottom: 18px;
+    // padding-left: $Sp-8;
+    overflow-y: scroll;
+    @include scrollBar;
+    .chrysanthemum-loading-wrapper {
+      position: relative;
+      height: 80px;
+    }
+  }
+
+  &__empty {
+    margin-top: 88px;
+  }
+
+  &__label {
+    @include Fs-3;
+    position: relative;
+    margin-top: $Sp-8;
+    margin-bottom: $Sp-6;
+    padding-left: 11px;
+    color: $CSS_VAR-M2;
+    font-weight: bolder;
+
+    &::before {
+      position: absolute;
+      top: 6px;
+      left: 0;
+      display: inline-block;
+      width: 3px;
+      height: 12px;
+      background: $CSS_VAR-S4;
+      content: '';
+    }
+  }
+
+  &__remind_btn{
+    margin-left:$Sp-2;
+  }
+  &__bell_wrap{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  &__bell_wrap:hover, &__bell_wrap:hover &__bell_btn{
+    color: $CSS_VAR-S3;
+  }
+  &__remind_time{
+    position:absolute;
+    left:0;
+    display:flex;
+    align-items: center;
+    padding: 0 $Sp-4 0 $Sp-4;
+    color: $F-yellow;
+    font-weight: 400;
+    font-size:12px;
+    line-height: 20px;
+    background: hexToRgba($F-yellow,0.10);
+    border:1px solid hexToRgba($F-yellow,0.52);
+    border-radius: $Ra-2;
+  }
+  &__bell{
+    margin-right:$Sp-2;
+    color:#FFA42E;
+  }
+  &__bell_btn{
+    color: $CSS_VAR-M4;
+  }
+  &__showLayer{
+    color: $CSS_VAR-S3;
+  }
+  &__remind_delete{
+    margin-left: $Sp-2;
+    color: $F-yellow;
+    font-weight: 400;
+  }
+  &__remind_customBtn{
+    float:right;
+    margin: 0 $Sp-4 $Sp-3 0;
+    color: $CSS_VAR-S2;
+    font-weight: 400;
+    cursor:pointer;
+    @include Fs-1;
+  }
+  // 时间弹层样式
+  &__remind_defaultLayer{
+    .common-unmodeled-layer__layerContent{
+      width:260px !important;
+      margin-left: -54px !important;
+    }
+  }
+  &__remind_customLayer{
+    .common-unmodeled-layer__layerContent{
+      margin-left: -54px !important;
+    }
+   .phoenix-date-time-picker-input-wrap {
+    .common-unmodeled-layer__layerContent{
+      margin-left:0;
+    }
+   }
+  }
+  //提醒时间样式
+  &__hasTimeError{
+    .commentor-button-area{
+      position:relative;
+      margin-top: 62px;
+    }
+    .recruit-paas-comment__remind_time{
+      margin-top:-52px;
+    }
+    .recruit-paas-comment__remind_timeError{
+      position:absolute;
+      left: $Sp-3;
+      margin-top:-32px;
+      color: $F-red;
+      font-weight: 400;
+      @include Fs-1;
+    }
+  }
+  &__hasTime{
+    .commentor-button-area{
+      position:relative;
+      margin-top: 42px;
+    }
+    .recruit-paas-comment__remind_time{
+      margin-top:-32px;
+    }
+  }
+}
+
+
+
+
+.recruit-paas-reply-comment {
+  margin-bottom: $Sp-2;
+
+  .recruit-paas-reply-text {
+    @include Fs-2;
+    margin-right: $Sp-1;
+    color: $CSS_VAR-M4;
+  }
+
+  .recruit-paas-reply-name {
+    display: inline-block;
+    padding-right: $Sp-3;
+    padding-left: $Sp-3;
+    color: $CSS_VAR-M2;
+    background: $CSS_VAR-M7;
+    border-radius: $Ra-1;
+    cursor: pointer;
+    @include Fs-1;
+
+    &:hover {
+      color: $F-red;
+      background: $CSS_VAR-M7;
+    }
+
+    svg {
+      margin-bottom: -2px;
+      margin-left: $Sp-2;
+    }
+  }
+}
